@@ -1,0 +1,9 @@
+Hi <%= params[:user].email %> <br/>
+
+Someone requested a reset of your password.
+
+If this was you, click the link below to reset the password. The link will expire autoatically in 15 minutes
+
+<%= link_to "Reset password", password_reset_edit_url(token:@token) %>
+<!-- in MAILER we need to use "_url" instead of "_path" -->
+<!-- (@token) means grab the token instance variable from mailer -->
